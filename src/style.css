@@ -134,6 +134,7 @@ li label,
   text-decoration: none;
   color: inherit;
 }
+
 #editfield {
   border: none;
 }
@@ -199,6 +200,7 @@ li.dragging {
 #clearCompleted:hover {
   background-color: #c0392b;
 }
+
 .disable {
   display: none;
 }
