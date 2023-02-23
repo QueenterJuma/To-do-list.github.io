@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today's To Do</title>
+    <script
+      src="https://kit.fontawesome.com/58789452ae.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="align-center">
+    <main class="todoli align-center">
+      <div class="head">
+        <h1>To-do List</h1>
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </div>
+
+      <form id="newTaskForm">
+        <label for="newTask">
+          <input
+            type="text"
+            class="input-content"
+            placeholder="Add your list..."
+            name="newTask"
+            id="newTask"
+          />
+        </label>
+        <button type="submit" class="add-button">Add</button>
+      </form>
+      <ul id="taskList"></ul>
+      <button id="clearCompleted">Clear all completed</button>
+    </main>
+    
+  </body>
+</html>
