@@ -1,12 +1,11 @@
 import "./style.css";
+import { saveTasks, loadTasks } from "./modules/storage";
 
 const taskList = document.getElementById("taskList");
 const newTaskForm = document.getElementById("newTaskForm");
 const clearCompletedButton = document.getElementById("clearCompleted");
 let tasks = [];
-const saveTasks = () => {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-};
+
 const renderTaskList = () => {
   taskList.innerHTML = "";
 
@@ -21,7 +20,7 @@ const renderTaskList = () => {
     taskCheckbox.checked = task.completed;
     taskCheckbox.addEventListener("change", (event) => {
       tasks[index].completed = event.target.checked;
-      saveTasks();
+      saveTasks(tasks);
       renderTaskList();
     });
 
@@ -31,6 +30,7 @@ const renderTaskList = () => {
     const taskinput = document.createElement("input");
     taskinput.type = "text";
     taskinput.className = "disable";
+    taskinput.id = "editfield";
 
     const taskDeleteButton = document.createElement("button");
     taskDeleteButton.type = "button";
@@ -38,7 +38,7 @@ const renderTaskList = () => {
     taskDeleteButton.addEventListener("click", () => {
       tasks.splice(index, 1);
       updateIndex();
-      saveTasks();
+      saveTasks(tasks);
       renderTaskList();
     });
     const taskeditButton = document.createElement("button");
@@ -50,11 +50,12 @@ const renderTaskList = () => {
     tasksaveButton.className = "disable";
 
     taskeditButton.addEventListener("click", () => {
-      tasksaveButton.classList.remove('disable');
-      taskinput.classList.remove('disable');
+      tasksaveButton.classList.remove("disable");
+      taskinput.classList.remove("disable");
       taskinput.value = taskLabel.textContent;
-      taskLabel.classList.add('disable');
-      taskeditButton.classList.add('disable');
+      taskinput.focus();
+      taskLabel.classList.add("disable");
+      taskeditButton.classList.add("disable");
     });
 
     tasksaveButton.addEventListener("click", () => {
@@ -64,7 +65,7 @@ const renderTaskList = () => {
       tasks[index].description = taskinput.value;
       taskLabel.classList.remove("disable");
       taskeditButton.classList.remove("disable");
-      saveTasks();
+      saveTasks(tasks);
       renderTaskList();
     });
 
@@ -85,23 +86,16 @@ const updateIndex = () => {
   });
 };
 
-const loadTasks = () => {
-  const tasksJson = localStorage.getItem("tasks");
-  if (tasksJson) {
-    tasks = JSON.parse(tasksJson);
-  }
-};
-
 const addTask = (name) => {
   const task = { index: tasks.length + 1, description: name, completed: false };
   tasks.push(task);
-  saveTasks();
+  saveTasks(tasks);
   renderTaskList();
 };
 
 const clearCompletedTasks = () => {
   tasks = tasks.filter((task) => !task.completed);
-  saveTasks();
+  saveTasks(tasks);
   renderTaskList();
 };
 
@@ -126,7 +120,7 @@ const handleDragOver = (event) => {
     );
     const oldIndex = draggingElement.getAttribute("data-index");
     tasks.splice(newIndex, 0, tasks.splice(oldIndex, 1)[0]);
-    saveTasks();
+    saveTasks(tasks);
   }
 };
 
@@ -153,5 +147,5 @@ taskList.addEventListener("dragstart", handleDragStart);
 taskList.addEventListener("dragover", handleDragOver);
 taskList.addEventListener("dragend", handleDragEnd);
 
-loadTasks();
+tasks = loadTasks();
 renderTaskList();
