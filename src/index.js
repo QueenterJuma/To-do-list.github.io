@@ -33,6 +33,7 @@ const renderTaskList = () => {
     taskDeleteButton.textContent = 'Delete';
     taskDeleteButton.addEventListener('click', () => {
       tasks.splice(index, 1);
+      updateIndex();
       saveTasks();
       renderTaskList();
     });
@@ -45,6 +46,12 @@ const renderTaskList = () => {
   });
 };
 
+const updateIndex = () => {
+  tasks.forEach((element, index) => {
+    element.index = index + 1;
+  })
+}
+
 const loadTasks = () => {
   const tasksJson = localStorage.getItem('tasks');
   if (tasksJson) {
@@ -53,7 +60,7 @@ const loadTasks = () => {
 };
 
 const addTask = (name) => {
-  const task = { name, completed: false };
+  const task = { index:tasks.length+1, name:name, completed: false };
   tasks.push(task);
   saveTasks();
   renderTaskList();
