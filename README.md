@@ -25,9 +25,9 @@ One attachment
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖-Awsome-book <a name="about-project"></a>
+# 📖-To-do-list <a name="about-project"></a>
 
-**Awesome-book** is a basic website that allows users to add/remove books from a list .
+**To-do-list** is a project done for the activity "To Do list: list structure" of the Microverse Program. The goal is to to learn use webpack and javascript ES6.
 
 ## 🛠 Built With <a name="built-with"></a>
 - HTML
@@ -40,12 +40,23 @@ One attachment
 - JavaScript
 - HTM
 - CSS
+- Webpack
+
+### Key Features <a name="key-features"></a>
+
+- **Use Webpack**
+- **Use ES6**
+- **Use Add/Update/Remove Tasks**
+- **Drag and Drop task feature**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">JavaScript</a></li>
   </ul>
 </details>
  
@@ -79,7 +90,7 @@ Clone this repository to your desired folder:
  
 ```sh
   cd my-folder
-  git clone git@github.com:Tracy-miranja/Awesome-book.git
+  git clone git@github.com:https://github.com/QueenterJuma/To-do-list.git
 ```
  
 ### Install
@@ -107,13 +118,11 @@ To run the project, open index.html in your text editor,right-click and open wit
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 <!-- FUTURE FEATURES -->
- 
+
 ## 🔭 Future Features <a name="future-features"></a>
- 
-- [ ] **Web page header**
-- [ ] **Web page body**
-- [ ] **Web page footer**
-- [ ] **Desktop design**
+
+- [x] **Drag and Drop task**
+- [x] **Personnalize the style**
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +138,7 @@ To run the project, open index.html in your text editor,right-click and open wit
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/QueenterJuma/To-do-list/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
@@ -145,8 +154,7 @@ If the project was great as your view, don't hesitate to share and give it a sta
  
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
  
-I would like to thank  all my Mricronauts partners for support and microverse for giving me this design template to work on.
- 
+Inspired by [getminimalist](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/), thanks to them
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 <!-- LICENSE -->
