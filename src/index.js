@@ -1,5 +1,6 @@
 import './style.css';
 import { saveTasks, loadTasks } from './modules/storage';
+import clearCompletedTasks from './modules/clearComplete';
 
 const taskList = document.getElementById('taskList');
 const newTaskForm = document.getElementById('newTaskForm');
@@ -32,6 +33,7 @@ const renderTaskList = () => {
 
     const taskLabel = document.createElement('label');
     taskLabel.textContent = task.description;
+    taskLabel.className = task.completed ? 'mark' : '';
 
     const taskinput = document.createElement('input');
     taskinput.type = 'text';
@@ -93,12 +95,6 @@ const addTask = (name) => {
   renderTaskList();
 };
 
-const clearCompletedTasks = () => {
-  tasks = tasks.filter((task) => !task.completed);
-  saveTasks(tasks);
-  renderTaskList();
-};
-
 const handleDragStart = (event) => {
   event.target.classList.add('dragging');
 };
@@ -140,7 +136,10 @@ newTaskForm.addEventListener('submit', (event) => {
 });
 
 clearCompletedButton.addEventListener('click', () => {
-  clearCompletedTasks();
+  tasks = clearCompletedTasks(tasks);
+  updateIndex();
+  saveTasks(tasks);
+  renderTaskList();
 });
 
 taskList.addEventListener('dragstart', handleDragStart);

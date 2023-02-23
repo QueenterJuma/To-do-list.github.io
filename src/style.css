@@ -188,6 +188,10 @@ li.dragging {
   outline: none;
 }
 
+.mark {
+  text-decoration: line-through;
+}
+
 #clearCompleted {
   border: none;
   border-radius: 4px;
