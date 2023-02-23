@@ -190,3 +190,6 @@ li.dragging {
 #clearCompleted:hover {
   background-color: #c0392b;
 }
+.disable {
+  display: none;
+}
