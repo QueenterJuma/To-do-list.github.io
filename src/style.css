@@ -11,8 +11,9 @@ body {
   align-content: center;
   background-color: #f6f6f6;
   font-family: "Inter var", sans-serif;
-  padding: 40px auto 40px auto;
+  padding: 40px 0 40px 0;
 }
+
 .align-center {
   display: flex;
   align-items: center;
