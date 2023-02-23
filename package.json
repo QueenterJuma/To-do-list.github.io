@@ -2,6 +2,7 @@
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "README.md\r One attachment\r • Scanned by Gmail\r <a name=\"readme-top\"></a>",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
