@@ -10,28 +10,28 @@ const saveTasks = () => {
 const renderTaskList = () => {
   taskList.innerHTML = '';
 
-  tasks.forEach((task, index) => {
-    const taskElement = document.createElement('li');
-    taskElement.className = 'task';
+  tasks.forEach(({ description, completed, index }) => {
+    const taskElement = document.createElement("li");
+    taskElement.className = "task";
     taskElement.draggable = true;
     taskElement.dataset.index = index;
 
-    const taskCheckbox = document.createElement('input');
-    taskCheckbox.type = 'checkbox';
-    taskCheckbox.checked = task.completed;
-    taskCheckbox.addEventListener('change', (event) => {
+    const taskCheckbox = document.createElement("input");
+    taskCheckbox.type = "checkbox";
+    taskCheckbox.checked = completed;
+    taskCheckbox.addEventListener("change", (event) => {
       tasks[index].completed = event.target.checked;
       saveTasks();
       renderTaskList();
     });
 
-    const taskLabel = document.createElement('label');
-    taskLabel.textContent = task.name;
+    const taskLabel = document.createElement("label");
+    taskLabel.textContent = description;
 
-    const taskDeleteButton = document.createElement('button');
-    taskDeleteButton.type = 'button';
-    taskDeleteButton.textContent = 'Delete';
-    taskDeleteButton.addEventListener('click', () => {
+    const taskDeleteButton = document.createElement("button");
+    taskDeleteButton.type = "button";
+    taskDeleteButton.textContent = "Delete";
+    taskDeleteButton.addEventListener("click", () => {
       tasks.splice(index, 1);
       saveTasks();
       renderTaskList();
@@ -52,8 +52,8 @@ const loadTasks = () => {
   }
 };
 
-const addTask = (name) => {
-  const task = { name, completed: false };
+const addTask = (description, completed, index) => {
+  const task = { description, completed, index };
   tasks.push(task);
   saveTasks();
   renderTaskList();
