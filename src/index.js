@@ -5,27 +5,27 @@ const taskList = document.getElementById('taskList');
 const tasks = [
   {
     index: 1,
-    name: 'Reading book',
+    description: 'Reading book',
     completed: false,
   },
   {
     index: 2,
-    name: 'Meditating',
+    description: 'Meditating',
     completed: false,
   },
   {
     index: 3,
-    name: 'Riding bycicle',
+    description: 'Riding bycicle',
     completed: false,
   },
   {
     index: 4,
-    name: 'Meeting',
+    description: 'Meeting',
     completed: false,
   },
   {
     index: 5,
-    name: 'Coding',
+    description: 'Coding',
     completed: false,
   },
 ];
@@ -44,7 +44,7 @@ const renderTaskList = () => {
     taskCheckbox.checked = task.completed;
 
     const taskLabel = document.createElement('label');
-    taskLabel.textContent = task.name;
+    taskLabel.textContent = task.description;
 
     const taskDeleteButton = document.createElement('button');
     taskDeleteButton.type = 'button';
