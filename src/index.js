@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 import { saveTasks, loadTasks } from './modules/storage';
 import clearCompletedTasks from './modules/clearComplete';
 
@@ -94,7 +94,7 @@ const addTask = (name) => {
   saveTasks(tasks);
   renderTaskList();
 };
-
+export {addTask}
 const handleDragStart = (event) => {
   event.target.classList.add('dragging');
 };
