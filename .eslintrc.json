@@ -22,7 +22,6 @@
       }
     ]
   },
-  "ignorePatterns": ["dist/", "build/"]
+  "ignorePatterns": ["dist/", "build/", "coverage/"]
   /* eslint-disable rule-you-want-to-disable */
-  
 }

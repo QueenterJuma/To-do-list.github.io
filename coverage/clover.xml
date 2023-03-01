@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1677683238330" clover="3.2.0">
+  <project timestamp="1677683238331" name="All files">
+    <metrics statements="77" coveredstatements="56" conditionals="4" coveredconditionals="1" methods="11" coveredmethods="7" elements="92" coveredelements="64" complexity="0" loc="77" ncloc="77" packages="1" files="3" classes="3"/>
+    <file name="renderTask.js" path="C:\xampp\htdocs\microverse\module_2\pair\To-do-list.github.io\src\modules\renderTask.js">
+      <metrics statements="66" coveredstatements="49" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="4"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="7" type="stmt"/>
+      <line num="11" count="7" type="stmt"/>
+      <line num="12" count="7" type="stmt"/>
+      <line num="13" count="7" type="stmt"/>
+      <line num="15" count="7" type="stmt"/>
+      <line num="16" count="7" type="stmt"/>
+      <line num="17" count="7" type="stmt"/>
+      <line num="18" count="7" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="24" count="7" type="stmt"/>
+      <line num="25" count="7" type="stmt"/>
+      <line num="26" count="7" type="cond" truecount="1" falsecount="1"/>
+      <line num="28" count="7" type="stmt"/>
+      <line num="29" count="7" type="stmt"/>
+      <line num="30" count="7" type="stmt"/>
+      <line num="31" count="7" type="stmt"/>
+      <line num="33" count="7" type="stmt"/>
+      <line num="34" count="7" type="stmt"/>
+      <line num="35" count="7" type="stmt"/>
+      <line num="36" count="7" type="stmt"/>
+      <line num="37" count="7" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="43" count="7" type="stmt"/>
+      <line num="44" count="7" type="stmt"/>
+      <line num="45" count="7" type="stmt"/>
+      <line num="46" count="7" type="stmt"/>
+      <line num="47" count="7" type="stmt"/>
+      <line num="48" count="7" type="stmt"/>
+      <line num="49" count="7" type="stmt"/>
+      <line num="51" count="7" type="stmt"/>
+      <line num="52" count="0" type="stmt"/>
+      <line num="53" count="0" type="stmt"/>
+      <line num="54" count="0" type="stmt"/>
+      <line num="55" count="0" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="57" count="0" type="stmt"/>
+      <line num="60" count="7" type="stmt"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="63" count="0" type="stmt"/>
+      <line num="64" count="0" type="stmt"/>
+      <line num="65" count="0" type="stmt"/>
+      <line num="66" count="0" type="stmt"/>
+      <line num="67" count="0" type="stmt"/>
+      <line num="68" count="0" type="stmt"/>
+      <line num="71" count="7" type="stmt"/>
+      <line num="72" count="7" type="stmt"/>
+      <line num="73" count="7" type="stmt"/>
+      <line num="74" count="7" type="stmt"/>
+      <line num="75" count="7" type="stmt"/>
+      <line num="76" count="7" type="stmt"/>
+      <line num="78" count="7" type="stmt"/>
+      <line num="82" count="1" type="stmt"/>
+      <line num="83" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
+      <line num="86" count="1" type="stmt"/>
+    </file>
+    <file name="storage.js" path="C:\xampp\htdocs\microverse\module_2\pair\To-do-list.github.io\src\modules\storage.js">
+      <metrics statements="7" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+    </file>
+    <file name="updateIndex.js" path="C:\xampp\htdocs\microverse\module_2\pair\To-do-list.github.io\src\modules\updateIndex.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
