@@ -22,7 +22,11 @@
   "homepage": "https://github.com/QueenterJuma/To-do-list#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.4.3",
     "jest-environment-jsdom": "^29.4.3",

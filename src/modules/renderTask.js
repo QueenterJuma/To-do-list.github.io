@@ -1,7 +1,6 @@
 import { saveTasks, loadTasks } from './storage';
 import updateIndex from './updateIndex';
 
-// let tasks = [];
 const renderTaskList = (tasks) => {
   const taskList = document.getElementById('taskList');
   taskList.innerHTML = '';
@@ -32,7 +31,7 @@ const renderTaskList = (tasks) => {
 
     const taskDeleteButton = document.createElement('button');
     taskDeleteButton.type = 'button';
-    taskDeleteButton.className = "delete";
+    taskDeleteButton.className = 'delete';
     taskDeleteButton.innerHTML = '<i class="fa fa-trash"></i>';
     taskDeleteButton.addEventListener('click', () => {
       tasks.splice(index, 1);
@@ -86,5 +85,6 @@ const addTask = (tasks, name) => {
   renderTaskList(tasks);
 };
 
-// const task_list = tasks;
-export {renderTaskList, saveTasks, loadTasks,updateIndex, addTask}
+export {
+  renderTaskList, saveTasks, loadTasks, updateIndex, addTask,
+};

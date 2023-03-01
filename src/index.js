@@ -1,5 +1,7 @@
 import './style.css';
-import { renderTaskList, saveTasks, loadTasks, updateIndex, addTask } from './modules/renderTask';
+import {
+  renderTaskList, saveTasks, loadTasks, updateIndex, addTask,
+} from './modules/renderTask';
 import clearCompletedTasks from './modules/clearComplete';
 
 const taskList = document.getElementById('taskList');
@@ -41,7 +43,7 @@ newTaskForm.addEventListener('submit', (event) => {
   const newTaskInput = document.getElementById('newTask');
   const taskName = newTaskInput.value.trim();
   if (taskName) {
-    addTask(tasks,taskName);
+    addTask(tasks, taskName);
     newTaskInput.value = '';
     newTaskInput.focus();
   }
