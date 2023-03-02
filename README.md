@@ -126,13 +126,13 @@ To run the project, open index.html in your text editor,right-click and open wit
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Key FEATURES -->
 
 - [ ] **Homepage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+## Colaborators
+- adamilare
 
 ## 🤝 Contributing <a name="contributing"></a>
 

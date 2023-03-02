@@ -1,5 +1,18 @@
-import { saveTasks, loadTasks } from './storage';
-import updateIndex from './updateIndex';
+import {
+  saveTasks,
+  saveTask,
+  loadTasks,
+  editTask,
+  deleteCompletedTasks,
+  swapIndex,
+  updateIndex,
+} from './storage';
+
+const saveEdit = (index, value) => {
+  renderTaskList(editTask(index, value)); // eslint-disable-line no-use-before-define
+};
+
+const changeStatus = (index) => renderTaskList(editTask(index, '', 1)); // eslint-disable-line no-use-before-define
 
 const renderTaskList = (tasks) => {
   const taskList = document.getElementById('taskList');
@@ -14,11 +27,7 @@ const renderTaskList = (tasks) => {
     const taskCheckbox = document.createElement('input');
     taskCheckbox.type = 'checkbox';
     taskCheckbox.checked = task.completed;
-    taskCheckbox.addEventListener('change', (event) => {
-      tasks[index].completed = event.target.checked;
-      saveTasks(tasks);
-      renderTaskList(tasks);
-    });
+    taskCheckbox.addEventListener('change', () => changeStatus(index));
 
     const taskLabel = document.createElement('label');
     taskLabel.textContent = task.description;
@@ -35,10 +44,9 @@ const renderTaskList = (tasks) => {
     taskDeleteButton.innerHTML = '<i class="fa fa-trash"></i>';
     taskDeleteButton.addEventListener('click', () => {
       tasks.splice(index, 1);
-      updateIndex(tasks);
-      saveTasks(tasks);
-      renderTaskList(tasks);
+      renderTaskList(updateIndex(tasks));
     });
+
     const taskeditButton = document.createElement('button');
     taskeditButton.type = 'button';
     taskeditButton.innerHTML = '<i class="fa fa-pencil"></i>';
@@ -60,11 +68,9 @@ const renderTaskList = (tasks) => {
       tasksaveButton.classList.add('disable');
       taskinput.classList.add('disable');
       taskLabel.textContent = taskinput.value;
-      tasks[index].description = taskinput.value;
       taskLabel.classList.remove('disable');
       taskeditButton.classList.remove('disable');
-      saveTasks(tasks);
-      renderTaskList(tasks);
+      saveEdit(index, taskinput.value);
     });
 
     taskElement.appendChild(taskCheckbox);
@@ -78,13 +84,61 @@ const renderTaskList = (tasks) => {
   });
 };
 
-const addTask = (tasks, name) => {
-  const task = { index: tasks.length + 1, description: name, completed: false };
-  tasks.push(task);
-  saveTasks(tasks);
-  renderTaskList(tasks);
+const addTask = (name) => {
+  // console.log("addTask");
+  renderTaskList(saveTask(name));
+};
+
+const clearCompletedTasks = () => {
+  renderTaskList(deleteCompletedTasks());
+};
+
+const handleDragStart = (event) => {
+  event.target.classList.add('dragging');
+};
+
+let draggedIndices = [];
+
+const handleDragOver = (event, taskList) => {
+  event.preventDefault();
+  const taskElement = event.target.closest('.task');
+  const draggingElement = document.querySelector('.dragging');
+  if (taskElement && draggingElement && taskElement !== draggingElement) {
+    const taskElementRect = taskElement.getBoundingClientRect();
+    const dragY = event.clientY - taskElementRect.top;
+    const isAfter = dragY > taskElementRect.height / 2;
+    taskList.insertBefore(
+      draggingElement,
+      isAfter ? taskElement.nextSibling : taskElement,
+    );
+    const newIndex = Array.from(taskList.querySelectorAll('.task')).indexOf(
+      draggingElement,
+    );
+    [].splice();
+    const oldIndex = draggingElement.getAttribute('data-index');
+    draggedIndices = [newIndex, oldIndex - 1];
+  }
+};
+
+const handleDragEnd = (event) => {
+  event.preventDefault();
+  event.target.classList.remove('dragging');
+  if (draggedIndices.length) {
+    renderTaskList(swapIndex(draggedIndices[0], draggedIndices[1]));
+    draggedIndices = [];
+  }
 };
 
 export {
-  renderTaskList, saveTasks, loadTasks, updateIndex, addTask,
+  renderTaskList,
+  saveTasks,
+  saveEdit,
+  loadTasks,
+  updateIndex,
+  addTask,
+  clearCompletedTasks,
+  handleDragStart,
+  handleDragOver,
+  handleDragEnd,
+  changeStatus,
 };
