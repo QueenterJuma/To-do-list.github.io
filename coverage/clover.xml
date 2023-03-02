@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677759020665" clover="3.2.0">
-  <project timestamp="1677759020666" name="All files">
+<coverage generated="1677760175483" clover="3.2.0">
+  <project timestamp="1677760175484" name="All files">
     <metrics statements="114" coveredstatements="84" conditionals="21" coveredconditionals="9" methods="23" coveredmethods="17" elements="158" coveredelements="110" complexity="0" loc="114" ncloc="114" packages="1" files="2" classes="2"/>
-    <file name="renderTask.js" path="C:\xampp\htdocs\microverse\module_2\pair\To-do-list.github.io\src\modules\renderTask.js">
+    <file name="renderTask.js" path="C:\Users\admin\MICROVERS-CLASS\MODULE-2-\To-do-list.github.io\src\modules\renderTask.js">
       <metrics statements="83" coveredstatements="53" conditionals="11" coveredconditionals="2" methods="13" coveredmethods="7"/>
       <line num="11" count="2" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
@@ -88,7 +88,7 @@
       <line num="127" count="0" type="stmt"/>
       <line num="128" count="0" type="stmt"/>
     </file>
-    <file name="storage.js" path="C:\xampp\htdocs\microverse\module_2\pair\To-do-list.github.io\src\modules\storage.js">
+    <file name="storage.js" path="C:\Users\admin\MICROVERS-CLASS\MODULE-2-\To-do-list.github.io\src\modules\storage.js">
       <metrics statements="31" coveredstatements="31" conditionals="10" coveredconditionals="7" methods="10" coveredmethods="10"/>
       <line num="1" count="23" type="stmt"/>
       <line num="3" count="2" type="stmt"/>

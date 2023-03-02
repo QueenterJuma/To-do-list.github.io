@@ -40,4 +40,15 @@ describe("Add and delete", () => {
     clearCompletedTasks();
     expect(loadTasks().length).toBe(1);
   });
+
+  test("Drag to re-order todo list", () => {
+    saveTasks([]);
+    addTask("test 1");
+    addTask("test 2");
+    addTask("test 3");
+    addTask("test 4");
+    const tasks = swapIndex(1, 2);
+    expect(tasks[1].description).toBe("test 3");
+    expect(tasks[2].description).toBe("test 2");
+  });
 });
