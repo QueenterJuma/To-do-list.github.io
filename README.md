@@ -132,7 +132,7 @@ To run the project, open index.html in your text editor,right-click and open wit
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Colaborators
-- adamilare
+- [adamilare](https://github.com/adamilare)
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -161,8 +161,8 @@ Inspired by [getminimalist](https://web.archive.org/web/20180320194056/http://ww
  
 ## 📝 License <a name="license"></a>
  
-This project is [MIT](https://github.com/Tracy-miranja/Awesome-book/blob/main/LICENCE licensed.
+This project is [MIT](https://github.com/QueenterJuma/To-do-list/blob/main/LICENCE) licensed.
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-README.md
-Displaying README.md.
+<!-- README.md
+Displaying README.md. -->
